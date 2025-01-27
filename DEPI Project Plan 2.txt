@@ -1,0 +1,112 @@
+Week 1 (Dec 17 – Dec 23): UI Design and Wireframes (Completed)
+Tasks:
+Completed the UI design and wireframes for all pages (Main, Audience, Settings, Calendar, Chatbot, Login, Sign Up).
+Weeks 2–3 (Jan 24 – Feb 4): Initial Setup & Basic Layout
+Frontend Tasks: Set up the React app and implement the basic layout of pages with static content.
+Member 1:
+Set up the React project using create-react-app.
+Install required dependencies (react-router-dom, react-icons).
+Work on Main Page layout (static content, navigation, statistics display).
+Member 2:
+Work on the Audience Page layout (static content, charts section).
+Implement static header and footer across all pages.
+Member 3:
+Work on the Settings Page layout (static content, sections like User Info, Privacy).
+Implement static navigation bar for page routing.
+Member 4:
+Implement static Chatbot Page layout (basic structure and content).
+Set up routes for navigating between pages.
+Member 5:
+Work on the Calendar Page layout (static content, calendar section).
+Set up react-router for page navigation.
+Weeks 4–5 (Feb 5 – Feb 18): Login/Sign-Up Pages & Backend Learning
+Frontend Tasks: Create the Login and Sign-Up pages (static forms).
+Backend Learning: Start learning backend (Node.js, Express, MongoDB basics).
+Member 1:
+Build the Login Page layout (form fields: email, password).
+Implement form validation (using React state).
+Member 2:
+Build the Sign-Up Page layout (form fields: username, email, password).
+Implement form validation (using React state).
+Member 3:
+Begin learning Node.js and Express basics (research and tutorials).
+Set up basic backend routes (login, signup, and user data storage).
+Member 4:
+Learn MongoDB basics for storing user data (email, password).
+Begin understanding JWT (JSON Web Tokens) for authentication.
+Member 5:
+Assist Member 3 & Member 4 with backend learning.
+Help integrate mock data for Login and Sign-Up forms.
+Weeks 6–7 (Feb 19 – Mar 3): Backend Setup & User Authentication
+Frontend Tasks: Connect the login/signup forms to the backend.
+Backend Tasks: Implement authentication logic using Node.js, Express, and JWT.
+Member 1:
+Integrate Login Page with the backend (send login request to the server).
+Display error messages for invalid credentials.
+Member 2:
+Integrate Sign-Up Page with the backend (send sign-up request to the server).
+Implement user registration and handle errors.
+Member 3:
+Set up Node.js/Express backend to handle the login and signup API routes.
+Implement MongoDB to store user credentials.
+Implement JWT token generation for user authentication.
+Member 4:
+Test the Login and Sign-Up API routes.
+Implement logic to send the JWT token to the frontend after login.
+Member 5:
+Help test login/signup functionalities.
+Assist with fixing backend issues (e.g., token validation).
+Weeks 8–9 (Mar 4 – Mar 17): Core Features Development & Social Media API Integration
+Frontend Tasks: Implement core features like charts and account management.
+Backend Tasks: Fetch real-time social media data from APIs (mock or real).
+Member 1:
+Implement Main Page features (total likes, posts, followers display).
+Integrate region chart (using Chart.js or Recharts).
+Add functionality to switch between weekly/monthly/yearly data.
+Member 2:
+Implement Audience Page (gender and age distribution charts).
+Use Chart.js/Recharts for charting audience data.
+Member 3:
+Set up a mock social media API to fetch real-time data (if available).
+Implement API integration to pull user data from Facebook, Instagram, etc.
+Member 4:
+Implement the Add Account section on the Main Page (input fields for social media credentials).
+Set up API calls for fetching social media data and displaying it in the dashboard.
+Member 5:
+Implement Settings Page (user info, change password, log out).
+Set up the user authentication state to reflect login status.
+Weeks 10–11 (Mar 18 – Mar 24): Chatbot, Calendar, Testing, and UI Refinements
+Frontend Tasks: Finalize the chatbot, calendar, and UI.
+Backend Tasks: Ensure data flow is seamless and secure.
+Member 1:
+Implement Chatbot Page (basic interaction).
+Test UI/UX and make improvements.
+Member 2:
+Implement Calendar Page for scheduling posts.
+Test chatbot functionality and integrate it with the backend if needed.
+Member 3:
+Optimize backend for better performance and security (API calls).
+Test backend with live social media data.
+Member 4:
+Implement user settings to control notifications, privacy settings.
+Test the Add Account and social media data fetching.
+Member 5:
+Test the full app (end-to-end, login, logout, data fetching, etc.).
+Optimize frontend performance (reduce loading times, optimize images).
+Week 12 (Mar 25 – Mar 30): Final Testing, Deployment, and Presentation
+Frontend & Backend Finalization: Optimize, deploy, and prepare for presentation.
+Member 1:
+Deploy the React frontend using Netlify or Vercel.
+Test final deployment (check responsiveness, and functionality).
+Member 2:
+Deploy the backend using Heroku.
+Final bug fixes and testing of the deployed version.
+Member 3:
+Final optimizations for backend and social media data integration.
+Prepare project documentation (backend setup, features).
+Member 4:
+Finalize UI and user experience on all pages.
+Prepare for presentation (demo, slides).
+Member 5:
+Prepare final presentation with demo, project goals, and outcomes.
+Assist with final testing and debugging.

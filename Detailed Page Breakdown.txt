@@ -1,0 +1,27 @@
+Detailed Page Breakdown
+Main Page
+Components:
+Statistics Cards: Reusable React components for total likes, posts, followers.
+Region Chart: Use Chart.js/Recharts for interactive charts.
+Add Account Section: Simple form for adding accounts (mock functionality for now).
+Recent Posts: Static data initially, with dynamic integration later.
+Audience Page
+Components:
+Gender Distribution Chart: Pie chart for men vs. women percentage.
+Age Distribution Chart: Bar chart for age groups.
+Statistics & Analytics
+Components:
+Post List: Display all posts with pagination.
+Post Analytics Page: Detailed view with charts for reactions, comments, and views.
+Settings Page
+Components:
+Sidebar with collapsible sections.
+Forms for changing email, password, and account settings.
+Chatbot Page
+Components:
+Simple chatbot interface.
+Placeholder for future API integration.
+Calendar Page
+Components:
+Interactive calendar for scheduling posts.
+Form for selecting a post date and time.

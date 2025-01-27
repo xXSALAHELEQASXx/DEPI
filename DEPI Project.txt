@@ -1,0 +1,33 @@
+Week 2–3 (Jan 21 – Jan 28): Initial Setup & Basic Layout
+Goals: Create static versions of the Main Page and navigation bar (HTML/CSS only).
+Tasks:
+Team Member 1 & 2: Design and implement the navigation bar with icons for all six pages.
+Team Member 3: Build static layouts for the Main Page (e.g., placeholders for statistics, charts, and recent posts).
+Team Member 4 & 5: Work on the add account section and header for the Main Page.
+Week 4 (Jan 29 – Feb 11): Backend and API Research
+Goals: Focus on understanding how to fetch or send data for specific features (e.g., statistics, chatbot, or calendar scheduling).
+Tasks:
+Main Page: Research and mock data for statistics (e.g., total likes, followers, region chart).
+Audience Page: Explore mock APIs for gender and age statistics.
+Statistics & Analytics Page: Research pagination and post-fetching APIs.
+Weeks 5–6 (Feb 12 – Feb 25): Core Features
+Goals: Start React development with basic routing and reusable components for each page.
+Tasks:
+Team Member 1: Implement the navigation bar with React Router for routing.
+Team Member 2 & 3: Create React components for the Main Page (e.g., charts, recent posts, and statistics cards).
+Team Member 4: Work on the Audience Page layout with mock data integration.
+Team Member 5: Develop reusable form components for settings and chatbot.
+Weeks 7–8 (Feb 26 – Mar 10): Advanced Features & Testing
+Goals: Add interactivity and integrate real APIs for all pages.
+Tasks:
+Main Page: Connect to APIs for statistics and recent posts.
+Audience Page: Fetch and display data for gender and age charts.
+Statistics & Analytics: Implement dynamic post analytics pages.
+Chatbot: Integrate basic chatbot functionality.
+Calendar Page: Add scheduling functionality with simple validations.
+Week 9 (Mar 11 – Mar 16): Optimization and Deployment
+Goals: Finalize all pages, test interactivity, and deploy the application.
+Tasks:
+Test all pages for responsiveness and API connectivity.
+Debug errors and finalize settings components.
+Deploy the project and prepare documentation for submission.

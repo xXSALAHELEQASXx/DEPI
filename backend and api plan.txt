@@ -1,0 +1,56 @@
+Backend and API Study Plan
+Day 1–2: Introduction to Backend Development
+What to Learn:
+What is a backend? (Role in a web application)
+Overview of backend technologies (focus on Node.js and Express.js).
+Server setup basics.
+Activities:
+Watch introductory videos/tutorials on Node.js and Express.js.
+Set up a simple Node.js project.
+Resources:
+Node.js Crash Course (YouTube)
+Express.js Tutorial (YouTube)
+Day 3–4: Understanding APIs
+What to Learn:
+What is an API, and how does it work?
+RESTful API basics (endpoints, HTTP methods like GET, POST, PUT, DELETE).
+Status codes (200, 404, 500, etc.).
+Activities:
+Explore a demo RESTful API (e.g., JSONPlaceholder).
+Use tools like Postman to send requests and understand responses.
+Resources:
+RESTful APIs in 100 Seconds (YouTube)
+Postman API Testing Guide (Postman)
+Day 5–6: Consuming APIs in React
+What to Learn:
+How to fetch data from an API in React.
+Using fetch and axios for API calls.
+Error handling and loading states in React.
+Activities:
+Create a simple React app that fetches and displays data from a public API.
+Handle edge cases like errors and loading.
+Resources:
+React Fetch Data with Fetch API (YouTube)
+Axios vs Fetch: A Comparison
+Day 7–8: Social Media APIs
+What to Learn:
+Introduction to social media APIs (e.g., Twitter, Instagram, Facebook Graph API).
+Authentication (OAuth basics, API keys).
+Limitations and quotas of public APIs.
+Activities:
+Register for a free API key on a social media platform.
+Test endpoints with Postman.
+Resources:
+Twitter API Docs
+Facebook Graph API Overview
+Day 9–10: CORS and Secure API Integration
+What to Learn:
+What is CORS (Cross-Origin Resource Sharing)?
+Handling CORS issues in development.
+Securing API keys using environment variables.
+Activities:
+Test and fix a CORS issue in a sample project.
+Store and use API keys securely in React.
+Resources:
+CORS Explained (YouTube)
+Environment Variables in React
