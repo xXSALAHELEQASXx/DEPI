@@ -1,0 +1,50 @@
+.main-page {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .chart-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  }
+  
+  canvas {
+    max-height: 400px !important;
+  }
+.chart {
+    flex: 3;
+}
+
+.numbers {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.number-item {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.number-item h3 {
+    margin-bottom: 8px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.number-item p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+}
+@media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
