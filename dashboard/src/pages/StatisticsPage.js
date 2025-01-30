@@ -1,27 +1,29 @@
 import React from "react";
 import { Bar, Doughnut, Line } from "react-chartjs-2";
 
+// Import Chart.js components
 import {
   Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  BarElement,
   ArcElement,
   Tooltip,
-  Legend
-} from 'chart.js';
+  Legend,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  PointElement,
+  LineElement,
+} from "chart.js";
 
+// Register Chart.js components
 ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  BarElement,
   ArcElement,
   Tooltip,
-  Legend
+  Legend,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  PointElement,
+  LineElement
 );
 
 const StatisticsPage = () => {
@@ -32,7 +34,7 @@ const StatisticsPage = () => {
       {
         label: "User Growth",
         data: [50, 100, 150, 200, 250, 300],
-        backgroundColor: "#007bff",
+        backgroundColor: "#9575CD", // Purple
       },
     ],
   };
@@ -44,7 +46,7 @@ const StatisticsPage = () => {
       {
         label: "Engagement",
         data: [40, 30, 20, 10],
-        backgroundColor: ["#007bff", "#28a745", "#ffc107", "#dc3545"],
+        backgroundColor: ["#FF7043", "#26A69A", "#9575CD", "#28A745"], // Coral, Mint Green, Purple, Green
       },
     ],
   };
@@ -56,15 +58,15 @@ const StatisticsPage = () => {
       {
         label: "Page Views",
         data: [500, 700, 800, 1000],
-        borderColor: "#28a745",
-        backgroundColor: "rgba(40, 167, 69, 0.5)",
+        borderColor: "#9575CD", // Purple
+        backgroundColor: "rgba(38, 166, 154, 0.5)", // Mint Green (semi-transparent)
         fill: true,
       },
     ],
   };
 
   return (
-    <div>
+    <div style={{ backgroundColor: "#FBF8F6", padding: "20px" }}>
       <h1>Statistics & Analytics Page</h1>
       <p>Here you can view analytics for posts and their detailed statistics.</p>
 
