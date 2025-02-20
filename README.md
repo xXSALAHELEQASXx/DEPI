@@ -20,6 +20,7 @@ Design the dashboard with accessibility in mind and ensure scalability to accomm
 
 Encourage Team Learning and Skill Development:
 Enhance team knowledge in React.js, JavaScript, and modern web development practices through the implementation of the project.
+
 ------------------------------------------------------------------------------------------------------------------------------------------
 Team Members and Roles
 All team members are working collaboratively as Front-End Developers, contributing equally to the project by:
