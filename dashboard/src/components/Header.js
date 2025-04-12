@@ -1,18 +1,24 @@
 import React from 'react';
+import { FaBell } from 'react-icons/fa';
 
 const Header = () => {
   return (
-    <header style={{
-      position: 'fixed',
-      top: 0,
-      width: '100%',
-      height: '60px',
-      backgroundColor: '#fff',
-      boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-      zIndex: 1000,
-      padding: '10px 20px'
-    }}>
-      <h1>Social Media Dashboard</h1>
+    <header className="flex items-center justify-end p-4 bg-white shadow">
+      <div className="flex items-center space-x-4">
+        <button className="relative focus:outline-none">
+          <FaBell size={24} className="text-gray-800" />
+          {/* Notification dot */}
+          <span className="absolute -top-1 -right-1 bg-red-500 rounded-full w-3 h-3"></span>
+        </button>
+        <div className="flex items-center space-x-2">
+          <img
+            src="https://via.placeholder.com/40"
+            alt="Avatar"
+            className="rounded-full"
+          />
+          <span className="text-gray-800 font-semibold text-xl">Nav</span>
+        </div>
+      </div>
     </header>
   );
 };
