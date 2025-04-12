@@ -1,305 +1,79 @@
-import React, { useState } from "react";
-import { FaThumbsUp, FaComment, FaShare } from "react-icons/fa";
+import React, { useState } from 'react';
+import Sidebar from '../components/Sidebar';
+import UploadSection from '../components/UploadSection';
+import ImageCard from '../components/ImageCard';
+import CalendarSchedule from '../components/CalendarSchedule';
+import FloatingActionButton from '../components/FloatingActionButton';
 
 const CalendarPage = () => {
-  const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
-  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
-  const [selectedDate, setSelectedDate] = useState(null);
-  const [likes, setLikes] = useState(0);
-  const [comments, setComments] = useState(0);
-  const [shares, setShares] = useState(0);
+  const [mediaPreview, setMediaPreview] = useState(null); // State for uploaded file preview
+  const [postText, setPostText] = useState(''); // State for user input
+  const [postContent, setPostContent] = useState(null); // State for posted content
 
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-
-  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-
-  const getDaysInMonth = (month, year) => new Date(year, month + 1, 0).getDate();
-  const getStartDay = (month, year) => new Date(year, month, 1).getDay();
-
-  const handlePrevMonth = () => {
-    if (currentMonth === 0) {
-      setCurrentMonth(11);
-      setCurrentYear((prevYear) => prevYear - 1);
-    } else {
-      setCurrentMonth((prevMonth) => prevMonth - 1);
+  const handleMediaUpload = (file) => {
+    if (file) {
+      const previewURL = URL.createObjectURL(file); // Generate temporary URL for the file
+      setMediaPreview(previewURL); // Set media preview URL
     }
   };
 
-  const handleNextMonth = () => {
-    if (currentMonth === 11) {
-      setCurrentMonth(0);
-      setCurrentYear((prevYear) => prevYear + 1);
-    } else {
-      setCurrentMonth((prevMonth) => prevMonth + 1);
-    }
+  const handlePost = () => {
+    // Save the current post text and media for rendering
+    setPostContent({ text: postText, media: mediaPreview });
+    // Reset input fields
+    setPostText('');
+    setMediaPreview(null);
   };
-
-  const daysInMonth = getDaysInMonth(currentMonth, currentYear);
-  const startDay = getStartDay(currentMonth, currentYear);
-
-  const calendarGrid = [];
-  for (let i = 0; i < startDay - 1; i++) calendarGrid.push(null);
-  for (let day = 1; day <= daysInMonth; day++) calendarGrid.push(day);
 
   return (
-    <div style={{ backgroundColor: "#F7F5F2", minHeight: "100vh", padding: "20px" }}>
-      <h1 style={{ color: "#2C2C2C", textAlign: "center" }}>Calendar Page</h1>
-
-      {/* Upper Section */}
-      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "40px" }}>
-        {/* Upload Section */}
-        <div
-          style={{
-            backgroundColor: "#FFFFFF",
-            borderRadius: "10px",
-            padding: "20px",
-            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-            flex: 1,
-            textAlign: "center",
-          }}
-        >
-          <h3 style={{ color: "#6A1B9A" }}>Upload Files</h3>
-          <p style={{ color: "#2C2C2C" }}>
-            Drag and drop your files here or click the button to upload.
-          </p>
-          <button
-            style={{
-              backgroundColor: "#6A1B9A",
-              color: "white",
-              border: "none",
-              borderRadius: "8px",
-              padding: "10px 20px",
-              cursor: "pointer",
-              fontWeight: "bold",
-              transition: "background-color 0.3s ease",
-            }}
-            onMouseOver={(e) => (e.target.style.backgroundColor = "coral")}
-            onMouseOut={(e) => (e.target.style.backgroundColor = "#6A1B9A")}
-          >
-            Browse File
-          </button>
-        </div>
-
-        {/* Schedule Section */}
-        <div
-          style={{
-            backgroundColor: "#FFFFFF",
-            borderRadius: "10px",
-            padding: "20px",
-            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-            flex: 1,
-            marginLeft: "20px",
-            textAlign: "center",
-          }}
-        >
-          <h3 style={{ color: "#6A1B9A" }}>Schedule</h3>
-          <p style={{ color: "#2C2C2C" }}>Plan your tasks efficiently.</p>
-          <button
-            style={{
-              backgroundColor: "#6A1B9A",
-              color: "white",
-              border: "none",
-              borderRadius: "8px",
-              padding: "10px 20px",
-              cursor: "pointer",
-              fontWeight: "bold",
-              transition: "background-color 0.3s ease",
-            }}
-            onMouseOver={(e) => (e.target.style.backgroundColor = "coral")}
-            onMouseOut={(e) => (e.target.style.backgroundColor = "#6A1B9A")}
-          >
-            Set Schedule
-          </button>
-        </div>
-      </div>
-
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "40px" }}>
-        {/* Calendar Section */}
-        <div style={{ flex: 2 }}>
-          {/* Navigation */}
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <button
-              style={{
-                backgroundColor: "#FF7043",
-                color: "white",
-                border: "none",
-                borderRadius: "8px",
-                padding: "10px 20px",
-                cursor: "pointer",
-                fontWeight: "bold",
-                transition: "background-color 0.3s ease",
-              }}
-              onClick={handlePrevMonth}
-              onMouseOver={(e) => (e.target.style.backgroundColor = "#6A1B9A")}
-              onMouseOut={(e) => (e.target.style.backgroundColor = "#FF7043")}
-            >
-              Prev
-            </button>
-            <h3 style={{ color: "#2C2C2C" }}>
-              {months[currentMonth]} {currentYear}
-            </h3>
-            <button
-              style={{
-                backgroundColor: "#FF7043",
-                color: "white",
-                border: "none",
-                borderRadius: "8px",
-                padding: "10px 20px",
-                cursor: "pointer",
-                fontWeight: "bold",
-                transition: "background-color 0.3s ease",
-              }}
-              onClick={handleNextMonth}
-              onMouseOver={(e) => (e.target.style.backgroundColor = "#6A1B9A")}
-              onMouseOut={(e) => (e.target.style.backgroundColor = "#FF7043")}
-            >
-              Next
-            </button>
-          </div>
-
-          {/* Calendar */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(7, 1fr)",
-              gap: "10px",
-              marginTop: "20px",
-              padding: "20px",
-              backgroundColor: "#FFFFFF",
-              borderRadius: "10px",
-              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-            }}
-          >
-            {days.map((day, index) => (
-              <div key={index} style={{ color: "#6A1B9A", fontWeight: "bold", textAlign: "center" }}>
-                {day}
-              </div>
-            ))}
-            {calendarGrid.map((day, index) => (
-              <div
-                key={index}
-                onClick={() => day && setSelectedDate(day)}
-                style={{
-                  textAlign: "center",
-                  padding: "10px",
-                  borderRadius: "50%",
-                  backgroundColor: day === selectedDate ? "#FF7043" : "#26A69A",
-                  color: day ? "white" : "transparent",
-                  fontWeight: "bold",
-                  cursor: day ? "pointer" : "default",
-                  transition: "all 0.3s ease",
-                }}
-              >
-                {day || ""}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Post Section */}
-        <div style={{ flex: 1 }}>
-          <div
-            style={{
-              backgroundColor: "#FFFFFF",
-              borderRadius: "10px",
-              padding: "20px",
-              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-              textAlign: "center",
-            }}
-          >
-            <h3 style={{ color: "#6A1B9A" }}>Your Post</h3>
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Post Placeholder"
-              style={{ width: "100%", borderRadius: "10px", marginBottom: "15px" }}
-            />
-            <p style={{ color: "#2C2C2C" }}>
-              Share your thoughts with the world! Click below to engage.
-            </p>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-around",
-                marginTop: "20px",
-                gap: "15px",
-              }}
-            >
-              {/* Like Button */}
+    <div className="relative min-h-screen flex gap-0 bg-white-100">
+      {/* Sidebar */}
+      <Sidebar className="lg:w-1/5 w-full hidden lg:block" />
+      {/* Main Content */}
+      <div className="flex-1 p-4 lg:p-6">
+        <div className="max-w-6xl mx-auto flex flex-col gap-6">
+          {/* Input Section */}
+          <div className="bg-white p-4 sm:p-6 shadow rounded">
+            <textarea
+              value={postText}
+              onChange={(e) => setPostText(e.target.value)}
+              placeholder="What's on your mind?"
+              className="w-full p-3 border rounded resize-none mb-4 text-base sm:text-lg"
+              rows="3"
+            ></textarea>
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+              <UploadSection onMediaUpload={handleMediaUpload} />
               <button
-                onClick={() => setLikes(likes + 1)}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "5px",
-                  backgroundColor: "#6A1B9A",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "8px",
-                  padding: "10px 15px",
-                  cursor: "pointer",
-                  fontWeight: "bold",
-                }}
+                onClick={handlePost}
+                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-base sm:text-lg"
               >
-                <FaThumbsUp /> Like ({likes})
-              </button>
-
-              {/* Comment Button */}
-              <button
-                onClick={() => setComments(comments + 1)}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "5px",
-                  backgroundColor: "#26A69A",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "8px",
-                  padding: "10px 15px",
-                  cursor: "pointer",
-                  fontWeight: "bold",
-                }}
-              >
-                <FaComment /> Comment ({comments})
-              </button>
-
-              {/* Share Button */}
-              <button
-                onClick={() => setShares(shares + 1)}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "5px",
-                  backgroundColor: "#FF7043",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "8px",
-                  padding: "10px 15px",
-                  cursor: "pointer",
-                  fontWeight: "bold",
-                }}
-              >
-                <FaShare /> Share ({shares})
+                Post
               </button>
             </div>
           </div>
+
+          {/* Calendar Schedule */}
+          <div className="flex-1">
+            <CalendarSchedule />
+          </div>
+
+          {/* Display Posted Content */}
+          {postContent && (
+            <div className="flex flex-col sm:flex-row gap-4">
+              <div className="bg-white p-4 shadow rounded w-full sm:w-2/3">
+                {postContent.text && (
+                  <p className="text-base sm:text-lg lg:text-xl mb-4">
+                    {postContent.text}
+                  </p>
+                )}
+                <ImageCard mediaPreview={postContent.media} />
+              </div>
+            </div>
+          )}
         </div>
       </div>
+      {/* Floating Action Button */}
+      <FloatingActionButton className="fixed bottom-4 right-4 lg:bottom-8 lg:right-8" />
     </div>
   );
 };
