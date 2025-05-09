@@ -105,7 +105,7 @@ export const useAuthStore = create<AuthState>((set) => {
  set({ isAuthenticated: true, user });
  localStorage.setItem('linkify_user', JSON.stringify(user));
     },
-    register: async (email, password, username) => {
+    register: async (username: string, email: string, password: string) => {
   const res = await fetch(`${import.meta.env.VITE_API_URL}/auth/register`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
