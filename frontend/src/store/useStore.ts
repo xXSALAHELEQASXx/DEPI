@@ -91,7 +91,7 @@ export const useAuthStore = create<AuthState>((set) => {
   return {
     ...initialState,
     login: async (email, password) => {
-      const res = await fetch('/api/auth/login', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/auth/login`, {
    method: 'POST',
    headers: { 'Content-Type': 'application/json' },
    body: JSON.stringify({ email, password }),
@@ -106,7 +106,7 @@ export const useAuthStore = create<AuthState>((set) => {
  localStorage.setItem('linkify_user', JSON.stringify(user));
     },
     register: async (email, password, username) => {
-  const res = await fetch('/api/auth/register', {
+  const res = await fetch(`${import.meta.env.VITE_API_URL}/auth/register`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, email, password }),
