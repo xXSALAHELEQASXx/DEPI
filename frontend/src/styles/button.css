@@ -1,0 +1,42 @@
+.btn {
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 60%,
+    var(--color-primary-light) 100%
+  );
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.7em 2em;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(122, 89, 247, 0.1);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover,
+.btn:focus {
+  background: linear-gradient(
+    90deg,
+    var(--color-primary-light) 60%,
+    var(--color-primary) 100%
+  );
+  box-shadow: 0 4px 16px 0 rgba(122, 89, 247, 0.18);
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary-light);
+  color: #fff;
+}

@@ -1,0 +1,25 @@
+.calendar {
+  background: var(--color-bg-card);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px 0 rgba(34, 34, 59, 0.06);
+  padding: 1.2rem;
+  transition: background 0.3s;
+}
+
+.calendar .calendar-header {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.calendar .calendar-day.active {
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 8px;
+}
+
+.calendar .calendar-day.today {
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: 8px;
+}

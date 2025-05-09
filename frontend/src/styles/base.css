@@ -1,0 +1,41 @@
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Inter", Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.card,
+.box,
+.panel {
+  background: var(--color-bg-card);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px 0 rgba(34, 34, 59, 0.06);
+  padding: 1.5rem;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-primary-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-light);
+  border-radius: 8px;
+}

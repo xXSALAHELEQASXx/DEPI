@@ -1,0 +1,139 @@
+@import "./styles/colors.css";
+@import "./styles/base.css";
+@import "./styles/button.css";
+@import "./styles/sidebar.css";
+@import "./styles/card.css";
+@import "./styles/calendar.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 20% 98%;
+    --foreground: 270 5% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 270 5% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 5% 10%;
+
+    --primary: 270 70% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 20% 96%;
+    --secondary-foreground: 270 5% 35%;
+
+    --muted: 270 20% 96%;
+    --muted-foreground: 270 5% 45%;
+
+    --accent: 270 20% 96%;
+    --accent-foreground: 270 5% 35%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 270 20% 90%;
+    --input: 270 20% 90%;
+    --ring: 270 70% 47%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 270 5% 35%;
+    --sidebar-primary: 270 70% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 20% 96%;
+    --sidebar-accent-foreground: 270 5% 35%;
+    --sidebar-border: 270 20% 90%;
+    --sidebar-ring: 270 70% 47%;
+  }
+
+  .dark {
+    --background: 270 20% 9%;
+    --foreground: 0 0% 98%;
+
+    --card: 270 20% 11%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 270 20% 11%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 270 70% 65%;
+    --primary-foreground: 270 10% 10%;
+
+    --secondary: 270 20% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 270 20% 16%;
+    --muted-foreground: 270 5% 75%;
+
+    --accent: 270 20% 16%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 270 20% 18%;
+    --input: 270 20% 18%;
+    --ring: 270 70% 65%;
+
+    --sidebar-background: 270 20% 11%;
+    --sidebar-foreground: 270 5% 85%;
+    --sidebar-primary: 270 70% 65%;
+    --sidebar-primary-foreground: 270 10% 10%;
+    --sidebar-accent: 270 20% 18%;
+    --sidebar-accent-foreground: 270 5% 85%;
+    --sidebar-border: 270 20% 18%;
+    --sidebar-ring: 270 70% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .card-stats {
+    @apply bg-card border p-5 rounded-lg shadow-sm hover:shadow-md transition-all;
+  }
+
+  .linkify-button {
+    @apply bg-linkify hover:bg-linkify-dark text-white font-semibold py-2 px-4 rounded transition-all;
+  }
+
+  .social-button {
+    @apply flex justify-center items-center p-2 rounded-full transition-all duration-300;
+  }
+
+  .chart-container {
+    @apply bg-card border p-4 rounded-lg shadow-sm mb-6;
+  }
+}
+/* تخصيص شريط التمرير للموقع بالكامل */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #9d62f5, #6049cd);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4c07ed;
+  width: 10px;
+}

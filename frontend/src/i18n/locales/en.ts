@@ -1,0 +1,111 @@
+export default {
+  common: {
+    appName: 'Linkify',
+    loading: 'Loading...',
+    login: 'Login',
+    signup: 'Sign Up',
+    email: 'Email',
+    password: 'Password',
+    username: 'Username',
+    forgotPassword: 'Forgot password?',
+    continue: 'Continue',
+    logout: 'Logout',
+    settings: 'Settings',
+    profile: 'Profile',
+    languages: {
+      en: 'English',
+      ar: 'Arabic'
+    },
+    theme: {
+      light: 'Light',
+      dark: 'Dark'
+    }
+  },
+  auth: {
+    welcome: 'Welcome back.',
+    createAccount: 'Create an Account',
+    loginButton: 'Login',
+    signupButton: 'Sign Up',
+    or: 'Or',
+    loginWithGoogle: 'Continue with Google',
+    loginWithFacebook: 'Continue with Facebook',
+    signUpWithEmail: 'Sign up with email',
+    alreadyHaveAccount: 'Already have an account?',
+    newUser: 'New user?',
+    signIn: 'Sign in',
+    signUpSuccess: 'Account created successfully!',
+    redirectToLogin: 'Redirecting to login...',
+    verifyAccount: 'Verify Your Account',
+    enterOtpSentTo: 'Enter the verification code sent to',
+    verifyOtp: 'Verify Code',
+    didntReceiveOtp: 'Didn\'t receive the code?',
+    resendOtp: 'Resend Code',
+    resendIn: 'Resend in',
+    otpResent: 'Verification code resent',
+    checkEmailForOtp: 'Please check your email for the new code',
+    verificationSuccess: 'Verification successful',
+    redirectingToDashboard: 'Redirecting to dashboard...',
+  },
+  sidebar: {
+    dashboard: 'Dashboard',
+    posts: 'Posts',
+    calendar: 'Calendar',
+    assistant: 'AI Assistant',
+    settings: 'Settings',
+    collapse: 'Collapse',
+    expand: 'Expand'
+  },
+  dashboard: {
+    title: 'Dashboard',
+    followers: 'Followers',
+    interactions: 'Interactions',
+    visits: 'Visits',
+    views: 'Views',
+    growth: 'Growth',
+    accounts: 'Connected Accounts',
+    insights: 'Insights',
+    engagement: 'Engagement',
+    recentPosts: 'Recent Posts'
+  },
+  posts: {
+    title: 'Posts',
+    create: 'Create Post',
+    edit: 'Edit Post',
+    schedule: 'Schedule',
+    publish: 'Publish',
+    preview: 'Preview',
+    platform: 'Platform',
+    date: 'Date',
+    time: 'Time',
+    status: 'Status',
+    analytics: 'Analytics'
+  },
+  composer: {
+    title: 'Create Post',
+    textPlaceholder: 'What would you like to share?',
+    addMedia: 'Add Media',
+    schedulePost: 'Schedule Post',
+    publishNow: 'Publish Now',
+    selectPlatform: 'Select Platform',
+    previewPost: 'Preview'
+  },
+  assistant: {
+    title: 'AI Assistant',
+    placeholder: 'Ask me anything about your social media...',
+    analyzing: 'Analyzing your account...',
+    suggestions: 'Content Suggestions',
+    automation: 'Automation Tools',
+    insights: 'Insights Analysis',
+    helpTopics: 'Help Topics'
+  },
+  errors: {
+    invalidCredentials: 'Invalid email or password',
+    requiredField: 'This field is required',
+    invalidEmail: 'Please enter a valid email',
+    passwordLength: 'Password must be at least 8 characters',
+    somethingWentWrong: 'Something went wrong. Please try again.',
+    invalidOtp: 'Invalid verification code',
+    pleaseEnterValidOtp: 'Please enter a valid 6-digit code',
+    verificationFailed: 'Verification failed',
+  }
+};

@@ -1,0 +1,26 @@
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease;
+  color: #9d62f5;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  color: #6049cd;
+}
+
+.icon:active {
+  transform: scale(0.9);
+  color: #553bc9;
+}
+
+.icon:focus {
+  outline: none;
+}
+
+.icon:focus-visible {
+  outline: 2px solid #9d62f5;
+}
