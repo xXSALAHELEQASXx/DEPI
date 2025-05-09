@@ -51,7 +51,11 @@ const RegisterForm = () => {
   const onSubmit = async (values: RegisterFormValues) => {
     setIsLoading(true);
     try {
-      await register(values.username, values.password, values.email);
+      await register(
+  values.username,
+  values.email,
+  values.password
+);
       toast({
         title: t("auth.signUpSuccess"),
         description: t("auth.redirectToLogin"),
